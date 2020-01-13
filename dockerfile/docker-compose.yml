@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  nginx:
+    image: miserver      
+    ports:
+       - 8081:80
+    volumes:
+       - C:/Proyectos/Formacion-DOCKER/volumes/nginx:/usr/share/nginx/html/
+
+  mysql:
+    image: mi-bbdd
+    environment:
+       - MYSQL_ROOT_PASSWORD=altia
+       - MYSQL_DATABASE=alumnos
+       - MYSQL_USER=uva
+       - MYSQL_PASSWORD=uvapass
+    volumes:
+       - C:/Proyectos/Formacion-DOCKER/dockerfile/mysql/sql-scripts:/docker-entrypoint-initdb.d/          
+    ports:
+       - 42333:3306
