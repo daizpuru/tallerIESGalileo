@@ -26,8 +26,8 @@ public class DemoApplication implements CommandLineRunner
     @Override
     public void run(String... args) throws Exception
     {
-        // Getting all
-        System.out.println("***** All *******");
+        // Todos
+        System.out.println("***** Todos *******");
         for(Entitybus st : entitybusRepository.findAll())
         {
             System.out.println(st);
