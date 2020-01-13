@@ -5,9 +5,6 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 
-/**
- * Created by Olga Pavlova on 9/16/2016.
- */
 @Entity
 @Table(name = "entitybus")
 public class Entitybus {
