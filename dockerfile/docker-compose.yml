@@ -13,8 +13,8 @@ services:
     environment:
        - MYSQL_ROOT_PASSWORD=altia
        - MYSQL_DATABASE=alumnos
-       - MYSQL_USER=uva
-       - MYSQL_PASSWORD=uvapass
+       - MYSQL_USER=galileo
+       - MYSQL_PASSWORD=galilei
     volumes:
        - C:/Proyectos/Formacion-DOCKER/dockerfile/mysql/sql-scripts:/docker-entrypoint-initdb.d/          
     ports:
