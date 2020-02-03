@@ -32,7 +32,7 @@ pipeline {
             when { branch "master" }
             steps {
                 sh '''
-					docker login -u "amritendudockerhub" -p "Passw1rd"
+					docker login -u "daizpuru" -p "czvak71947373"
                     docker build --no-cache -t person .
                     docker tag person:latest amritendudockerhub/person:latest
                     docker push amritendudockerhub/person:latest
@@ -45,7 +45,7 @@ pipeline {
             when { branch "master" }
             steps {
                 sh '''
-					docker login -u "amritendudockerhub" -p "Passw1rd"
+					docker login -u "daizpuru" -p "czvak71947373"
                     docker pull amritendudockerhub/person:latest
 					docker stop person
 					docker rm person
@@ -59,7 +59,7 @@ pipeline {
             when { buildingTag() }
             steps {
                 sh '''
-					docker login -u "amritendudockerhub" -p "Passw1rd"
+					docker login -u "daizpuru" -p "czvak71947373"
                     docker build --no-cache -t person .
                     docker tag person:latest amritendudockerhub/person:${TAG_NAME}
                     docker push amritendudockerhub/person:${TAG_NAME}
